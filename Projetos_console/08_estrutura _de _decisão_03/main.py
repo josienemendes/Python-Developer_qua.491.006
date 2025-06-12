@@ -1,5 +1,6 @@
 import os
-os.system
+os.system("cls")
+
 
 
 #declaracão de variaveis
