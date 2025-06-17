@@ -28,19 +28,19 @@ O programa deve mostrar o valor do Imc arredondado para 2 casas
 while True:
     try:
         #entrada de dados
-        nome = input("Informe o seu nome: ")
-        peso = float(input("Informe o seu peso em kg: "))
-        altura = float(input("Informe a sua altura em metros: "))
+        nome = input("Informe o seu nome: ").title().strip()
+        peso = float(input("Informe o seu peso em kg: ").replace(",", "."))
+        altura = float(input("Informe a sua altura em metros: ").replace(",", "."))
         imc = peso / (altura ** 2)
         if imc < 18.5:
             diagnostico = "Abaixo do peso"
-        elif 18.5 <= imc < 25:
+        elif imc < 25:
             diagnostico = "Peso ideal"
-        elif 25 <= imc < 30:
+        elif imc < 30:
             diagnostico = "Acima do peso"
-        elif 30 <= imc < 35:
+        elif imc < 35:
             diagnostico = "Obeso"
-        elif 35 <= imc < 40:
+        elif imc < 40:
             diagnostico = "Obesidade nível 2"
         else:
             diagnostico = "Obesidade mórbida"
