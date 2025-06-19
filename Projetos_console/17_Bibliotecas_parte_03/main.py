@@ -1,3 +1,7 @@
+import os
+os.system("cls")
+
+
 #Importando bibliotecas
 import math as m
 
